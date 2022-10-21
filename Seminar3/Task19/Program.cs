@@ -1,6 +1,8 @@
 ﻿Console.WriteLine("Введите пятизначное положительное число");
 int x = Convert.ToInt32(Console.ReadLine());
 
+
+void CheckPalindrom(int x){
 //Находим первое, второе, четвертое и пятое число.
 int number1 = x / 10000;
 int number2 = (x / 1000) % 10;
@@ -14,3 +16,6 @@ if (Convert.ToString(x).Length == 5 && x > 0){
     else Console.WriteLine($"Число {x} не является палиндромом");
 }
 else Console.WriteLine($"Вы ввели не пятизначное положительное число!");
+}
+
+CheckPalindrom(x);
