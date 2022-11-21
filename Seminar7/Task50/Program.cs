@@ -11,8 +11,13 @@
 
 void SearchElement(int[,] array, int m, int n)
 {
-    int element = array[m,n];
-    Console.WriteLine($"Значение элемента с заданными координатами равно {element}");
+    if ((m >= 0 && m <=4) && (n >= 0 && n <=4))
+    {
+        int element = array[m,n];
+        Console.WriteLine($"Значение элемента с заданными координатами равно {element}");
+    }
+    else Console.WriteLine("В массиве отсутствует элемент с такой позицией!!!!!");
+
 }
 
 void PrintArray(int[,] array)
@@ -28,6 +33,8 @@ void PrintArray(int[,] array)
 }
 
 int[,] array = new int[5, 5];
+
+
 Console.WriteLine("Введите номер строки элемента ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите номер колонки элемента ");
