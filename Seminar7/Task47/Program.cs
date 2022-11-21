@@ -17,26 +17,19 @@ void FillArray(int m, int n)
         }  
     }
 }    
-// Вывод двумерного массива по форме
-// [[8,33 1,68 7,53 ],
-//  [9,18 0,02 6,67 ],
-//  [4,68 8,44 1,56 ]]
+
 void PrintArray(Double[,] array)
 {
-    Console.Write("[");
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        if (i == 0) Console.Write("[");
-        else Console.Write(" [");
-
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write("{0,3} ", array[i,j]);     
-        }  
-        if (i < m - 1) Console.WriteLine("],");
-        else Console.Write("]]");
-    }
+            Console.Write(String.Format("{0,5}", array[i, j]));
+        }
+        Console.WriteLine();
+    }  
 }
 
 FillArray(m,n);
+Console.WriteLine("Полученный массив");
 PrintArray(array);
