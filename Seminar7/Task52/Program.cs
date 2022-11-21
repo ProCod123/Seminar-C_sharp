@@ -35,7 +35,7 @@ void GetSumColumn(int[,] array)
         {
             sum += array[j,i];
         }
-        double average = sum / Convert.ToDouble(m * n);
+        double average = sum / Convert.ToDouble(m);
 	    Console.WriteLine($"Среднее арифметическое чисел в столбце № {i} равно {average}");
     }  
 }
