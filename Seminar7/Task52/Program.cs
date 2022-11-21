@@ -14,7 +14,8 @@ void FillArray(int[,] array)
 }   
 	
 void PrintArray(int[,] array)
-{
+{   
+    Console.WriteLine("Был сформирован массив: ");
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
@@ -29,12 +30,13 @@ void GetSumColumn(int[,] array)
 {
     for (int i = 0; i < m; i++)
     {   
-        int sum = 0;
+        double sum = 0;
 	    for (int j = 0; j < n; j++)
         {
             sum += array[j,i];
         }
-	    Console.WriteLine($"Сумма чисел в столбце № {i} равна {sum}");
+        double average = sum / Convert.ToDouble(m * n);
+	    Console.WriteLine($"Среднее арифметическое чисел в столбце № {i} равно {average}");
     }  
 }
 
